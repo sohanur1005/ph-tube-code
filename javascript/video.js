@@ -73,7 +73,7 @@ const loadvideos=() =>
     .then(data => displayVideos(data.videos))
     .catch((error)=> console.log(error))
 }
-
+// show card
 const cardDemo={
     "category_id": "1001",
     "video_id": "aaaa",
@@ -143,14 +143,14 @@ const displayVideos=(videos)=>
       <h2 class="font-bold">${video.title}</h2>
       <div class="flex item-center gap-3 ">
       <p class="text-gray-400">${video.authors[0].profile_name}</p>
-      ${video.authors[0].verified == true?'<img class="w-5" src="https://img.icons8.com/?size=48&id=D9RtvkuOe31p&format=png" />' :""}
+      ${video.authors[0].verified == true?'<img class="w-5" src="https://img.icons8.com/?size=48&id=D9RtvkuOe31p&format=png" />' :""};
       </div>
     </div>
-
+     
   </div>
      
-     `
-     videoContainer.append(card)
+     `;
+     videoContainer.append(card);
 
    })
 }
